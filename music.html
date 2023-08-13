@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.container {
+			height: 100vh;
+			width: 100%;
+			background-image: url("https://cdnb.artstation.com/p/assets/images/images/017/056/063/large/sukhman-singh-bumrah-sidhu-legend.jpg?1554461219");
+
+			/* Image used: */
+			background-size: cover;
+			background-position: center;
+			position: relative;
+		}
+		.nav li {
+			float: right;
+			list-style: none;
+		}
+
+		.nav a {
+			list-style: none;
+			height: 50px;
+			line-height: 50px;
+			font-size: 1rem;
+			font-weight: 550;
+			display: block;
+			padding: 5px 35px;
+			color: white;
+			text-decoration: none;
+		}
+
+		.content {
+			width: 100%;
+			position: absolute;
+			top: 45%;
+		}
+
+		.left-col {
+			margin-left: 11%;
+		}
+
+		.left-col h1 {
+			font-size: 50px;
+			color: white;
+		}
+
+		.right-col {
+			float: right;
+			margin-right: 10%;
+			margin-top: -5%;
+			display: flex;
+			align-items: center;
+		}
+
+		.right-col p {
+			font-size: 21px;
+			color: white;
+			font-weight: 650;
+			margin-right: 20px;
+		}
+
+		#icon {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul class="nav">
+			<li><a href="event.html">Book Ticket</a></li>
+			<li><a href="https://soundcloud.com/dds_the1st">ARTISTS</a></li>
+			<li><a href="https://soundcloud.com/dds_the1st/dark-differences-dds-remix">MUSIC</a></li>
+			<li><a href="#"style="color:black">HOME</a></li>
+		</ul>
+	</div>
+	<div class="content">
+		<div class="left-col">
+			<br><h1>Sidhu Moose Wala </h1>
+		</div>
+		<div class="right-col">
+			<p>Click Here To Listen</p>
+			<img width="50px" src="https://www.freepnglogos.com/uploads/play-button-png/index-media-cover-art-play-button-overlay-5.png" id="icon">
+		</div>
+	</div>
+	<audio id="mysound">
+		<source src=
+		"media/Differences Remix (Final Version).mp3.mp3"
+		type="audio/mp3">
+	</audio>
+
+	<script>
+		let mysound = document.getElementById("mysound");
+		let icon = document.getElementById("icon");
+		icon.onclick = function () {
+			if (mysound.paused) {
+				mysound.play();
+				icon.src = "media/pngwing.com.png"
+			} else {
+				mysound.pause();
+				icon.src =
+				"https://www.freepnglogos.com/uploads/play-button-png/index-media-cover-art-play-button-overlay-5.png"
+			}
+		}
+	</script>
+</body>
+</html>
